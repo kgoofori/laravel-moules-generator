@@ -1,0 +1,34 @@
+{
+    "name": "kgoofori/laravel-modules-scaffold",
+    "description": "This package generates a modules folder structure and scaffolding for your laravel project",
+    "homepage": "https://github.com/kgoofori/laravel-modules-scaffold.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gideon Ofori",
+            "email": "kgoofori@gmail.com",
+            "homepage": "https://github.com/kgoofori/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "illuminate/console": "^9.21|^10.0|^11.0",
+        "illuminate/filesystem": "^9.21|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kgoofori\\LaravelModules\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kgoofori\\LaravelModules\\ModulesServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

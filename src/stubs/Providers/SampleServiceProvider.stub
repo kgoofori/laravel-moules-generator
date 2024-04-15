@@ -1,0 +1,32 @@
+<?php
+
+namespace {{nameSpace}}\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+class {{sample}}ServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->register(EventServiceProvider::class);
+        $this->app->register(RouteServiceProvider::class);
+    }
+
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->loadMigrationsFrom(__DIR__. '/../database/migrations');
+        $this->loadTransalationsFrom(__DIR__. '/../lnag', strtolower('{{sample}}'));
+
+        // app(\Illuminate\Contracts\Http\Kernel::class)->pushMiddleware(class_name);
+    }
+}
