@@ -1,3 +1,3 @@
 ## How to use package
 
-Run `php artisan php artisan module:generate {module}`
+Run `php artisan module:generate {module}`
